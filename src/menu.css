@@ -1,0 +1,74 @@
+.menu-container {
+  position: relative;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.menu-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  z-index: -1; /* Bring the video behind everything */
+  animation: loopVideo 10s infinite;
+}
+
+.content-container {
+  position: relative;
+  z-index: 1; /* Ensure the content appears above the video */
+}
+
+.menu-heading {
+  font-family: "Pacifico", cursive;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #d8964f;
+  font-size: 92px;
+  text-shadow: 12px 12px 4px rgba(0, 0, 0, 0.508);
+}
+.image-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-top: 300px;
+  margin-bottom: 0;
+}
+.image-list li {
+  flex: 0 0 calc(20% - 10px);
+  margin-right: 5px;
+}
+.image-list li:last-child {
+  margin-right: 0;
+}
+.image-list li img {
+  max-width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 320px) {
+  /* Styles for 320x480 screen size */
+.menu-heading {
+    font-size: 48px;
+  }
+.image-list li {
+    flex: 0 0 calc(50% - 5px);
+    margin-right: 2.5px;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  /* Styles for 480x640 screen size */
+  .menu-heading {
+    font-size: 60px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  /* Styles for 768x1024 screen size */
+  .menu-heading {
+    font-size: 64px;
+  }
+}
